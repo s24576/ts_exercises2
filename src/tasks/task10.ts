@@ -31,9 +31,10 @@ export type JeszczeStarszaKontrola = {
     opis: string;
 }
 
-//# ---
+export type PartialKontrola<T extends Record<keyof T, any>> = 
+    Partial<Pick<Kontrola, Extract<keyof Kontrola, keyof T>>> & 
+    Omit<Kontrola, keyof T>;
 
-export type PartialKontrola<T> = any;
 
 const kontrola1: PartialKontrola<StaraKontrola> = {
     godzina: "12:00",

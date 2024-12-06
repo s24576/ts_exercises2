@@ -27,8 +27,8 @@ export const skontrolujWydatki = (wydatek: Wydatki) => {
 
 //# ---
 
-export const isWydatek = (wydatek: any) => { return false; }
+export const isWydatek = (wydatek: Wydatek): wydatek is Wydatek => { return false; }
 
-export const isWydatekSzefa = (wydatek: any) => { return false; }
+export const isWydatekSzefa = (wydatek: Wydatek): wydatek is WydatekSzefa => { return false; }
 
-export const isWycieczkaSzefaNaKosztFirmy = (wydatek: any) => { return false; }
+export const isWycieczkaSzefaNaKosztFirmy = (wydatek: Wydatek): wydatek is WycieczkaSzefaNaKosztFirmy => { return false; }

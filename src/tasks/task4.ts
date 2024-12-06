@@ -1,3 +1,5 @@
+import { Kontrola } from "./task1.js";
+
 /**
  * Zadanie 4.
  *
@@ -11,8 +13,9 @@ export type KreatywnyWydatek = {
     wydatek: number;
     opis: string;
 }
-export type KontrolujKreatywnie = any;
-export type ZaksięgujKreatywnie = any;
+export type KontrolujKreatywnie = (kontrola: Kontrola) => Kontrola;
+
+export type ZaksięgujKreatywnie = (...wydatki: number[]) => KreatywnyWydatek[];
 
 export const kreatywneWydatki: ZaksięgujKreatywnie = (...wydatki: any) => {
     const listaWydatków: any = [];
