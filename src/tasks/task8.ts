@@ -23,7 +23,7 @@ export const wydatek3: WycieczkaSzefaNaKosztFirmy = {
     cel: "Cypr"
 }
 
-export const poprawWydatki: PoprawWydatki = (wydatek: any) => {
+export const poprawWydatki: PoprawWydatki = <T extends Wydatek> (wydatek: T) => {
     return {
         ...wydatek,
         kwota: wydatek.kwota * 1.23
